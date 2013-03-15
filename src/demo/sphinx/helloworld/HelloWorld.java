@@ -1,6 +1,10 @@
 /* Testing Sphinx
  * Please notify me before you mess around with this!
  * 
+ * ---------------------------------------------------
+ * 
+ * http://www.youtube.com/watch?v=ndMkNJtM248
+ * 
  */
 
 /*
@@ -26,6 +30,7 @@ import edu.cmu.sphinx.util.props.PropertyException;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import javax.speech.recognition.ResultToken;
 
 
 /**
@@ -33,12 +38,14 @@ import java.net.URL;
  * built using Sphinx-4. This application uses the Sphinx-4 endpointer,
  * which automatically segments incoming audio into utterances and silences.
  */
-public class HelloWorld {
+public class HelloWorld 
+{
 
     /**
      * Main method for running the HelloWorld demo.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         try {
             URL url;
             if (args.length > 0) {
@@ -59,15 +66,14 @@ public class HelloWorld {
             recognizer.allocate();
 
             /* the microphone will keep recording until the program exits */
-	    if (microphone.startRecording()) {
+	    if (microphone.startRecording()) 
+	    {
 
-		System.out.println
-		    ("Say: (Good morning | Hello) " +
-                     "( Bhiksha | Evandro | Paul | Philip | Rita | Will )");
+		System.out.println("Say: Open Browser");
 
-		while (true) {
-		    System.out.println
-			("Start speaking. Press Ctrl-C to quit.\n");
+		while (true)
+		{
+		    System.out.println("Start speaking. Press Ctrl-C to quit.\n");
 
                     /*
                      * This method will return when the end of speech
@@ -76,27 +82,56 @@ public class HelloWorld {
                      */ 
 		    Result result = recognizer.recognize();
 		    
-		    if (result != null) {
-			String resultText = result.getBestFinalResultNoFiller();
-			System.out.println("You said: " + resultText + "\n");
-		    } else {
-			System.out.println("I can't hear what you said.\n");
+		    if (result != null)
+		    {
+		    	String resultText = result.getBestFinalResultNoFiller();
+		    	System.out.println("You said: " + resultText + "\n");
+			
+		    	if(resultText.equalsIgnoreCase("Open Browser"))
+		    	{
+		    		try
+		    		{
+		    			Process p;
+		    			p = Runtime.getRuntime().exec("cmd /c chrome");
+		    		}
+		    		catch(Exception ae){}
+		    	}
+			
+		    } 
+		    
+		    else 
+		    {
+		    	System.out.println("I can't hear what you said.\n");
 		    }
 		}
-	    } else {
-		System.out.println("Cannot start microphone.");
-		recognizer.deallocate();
-		System.exit(1);
+	    } 
+	    
+	    else 
+	    {
+	    	System.out.println("Cannot start microphone.");
+	    	recognizer.deallocate();
+	    	System.exit(1);
 	    }
-        } catch (IOException e) {
+	    
+        } 
+        
+        catch (IOException e) 
+        {
             System.err.println("Problem when loading HelloWorld: " + e);
-            e.printStackTrace();
-        } catch (PropertyException e) {
+            e.printStackTrace();  
+        } 
+        
+        catch (PropertyException e) 
+        {
             System.err.println("Problem configuring HelloWorld: " + e);
             e.printStackTrace();
-        } catch (InstantiationException e) {
+        }
+        
+        catch (InstantiationException e) 
+        {
             System.err.println("Problem creating HelloWorld: " + e);
             e.printStackTrace();
         }
+        
     }
 }
