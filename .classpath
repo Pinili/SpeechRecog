@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Justin/My Documents/GitHub/SpeechRecog/marf-0.3.0-devel-20070108-fat.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
