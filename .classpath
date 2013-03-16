@@ -2,14 +2,5 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Nerman Nicholas/Desktop/Github/vreg/SpeechRecog/marf-0.3.0-devel-20070108-fat.jar" sourcepath="src/MainPackage"/>
-	<classpathentry kind="lib" path="C:/Users/Nerman Nicholas/Desktop/Github/vreg/SpeechRecog/sphinx4-0.1alpha/lib/sphinx4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nerman Nicholas/Desktop/Github/vreg/SpeechRecog/sphinx4-0.1alpha/lib/TIDIGITS_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nerman Nicholas/Desktop/Github/vreg/SpeechRecog/sphinx4-0.1alpha/lib/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nerman Nicholas/Desktop/Github/vreg/SpeechRecog/sphinx4-0.1alpha/lib/jsapi.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/Justin/My Documents/GitHub/SpeechRecog/sphinx4-0.1alpha/lib/jsapi.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/Justin/My Documents/GitHub/SpeechRecog/sphinx4-0.1alpha/lib/sphinx4.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/Justin/My Documents/GitHub/SpeechRecog/sphinx4-0.1alpha/lib/TIDIGITS_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/Justin/My Documents/GitHub/SpeechRecog/sphinx4-0.1alpha/lib/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
